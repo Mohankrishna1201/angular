@@ -1,0 +1,36 @@
+<section class="bg">
+  <section class="section">
+    <div class="overlay">
+
+      <div class="wrapper">
+        <div class="titleContainer">
+          <h1 class="title">Welcome!</h1>
+          <br />
+          <br />
+          <p class="para"><span style="color: #4aaa55">Login</span> and Explore your company Employee database</p>
+        </div>
+        <div class="login-form">
+          <div class="header">
+            <img loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3da127ffbcdae638cfbcd74d76fa93d4b91607c9bc06737a239bce1d1a34dd15?apiKey=6b2c18dd5a434af0bc296b4d166f3aea&"
+              alt="EMPLOYEE PORTAL icon" class="portal-icon" />
+            <h2 class="portal-title">EMPLOYEE PORTAL</h2>
+          </div>
+          <h3 class="form-title">Sign In</h3>
+          <p class="form-description">
+            Enter your credentials to access your account
+          </p>
+          <label for="username" class="input-label">Username</label>
+          <input type="text" placeholder="Username" [(ngModel)]="username" class="input-field" />
+          <label for="password" class="input-label">Password</label>
+          <input type="password" placeholder="Password" [(ngModel)]="password" class="input-field" />
+          <button (click)="handleLogin()" class="submit-button">SIGN IN</button>
+          <p class="password-reset">
+            <span class="forgot-text">Don't have an account? </span>
+            <a (click)="handleSignup()" class="reset-link">Signup</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

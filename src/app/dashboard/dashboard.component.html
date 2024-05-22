@@ -1,0 +1,51 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" (click)="handleLogin()">Let's DriEv</a>
+    <button class="btn btn-outline-light" (click)="handleLogout()">Logout</button>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h2 class="main-heading text-center">Welcome to the Dashboard</h2>
+  <form class="mt-4">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter name">
+    </div>
+    <div class="mb-3">
+      <label for="position" class="form-label">Position</label>
+      <input type="text" class="form-control" id="position" formControlName="position" placeholder="Enter position">
+    </div>
+    <div class="mb-3">
+      <label for="department" class="form-label">Department</label>
+      <input type="text" class="form-control" id="department" formControlName="department"
+        placeholder="Enter department">
+    </div>
+    <button type="button" class="btn btn-success mt-3" (click)="handleAddEmployee()">Add Employee</button>
+  </form>
+
+  <h3 class="heading mt-5">Employee List</h3>
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Department</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.position }}</td>
+        <td>{{ employee.department }}</td>
+        <td>
+          <button type="button" class="btn btn-warning btn-sm"
+            (click)="handleUpdateEmployee(employee._id)">Update</button>
+          <button type="button" class="btn btn-danger btn-sm"
+            (click)="handleDeleteEmployee(employee._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
